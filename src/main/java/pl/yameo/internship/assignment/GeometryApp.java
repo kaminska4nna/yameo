@@ -1,5 +1,7 @@
 package pl.yameo.internship.assignment;
 
+import pl.yameo.internship.assignment.shapes.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

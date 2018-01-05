@@ -3,7 +3,7 @@ package pl.yameo.internship.assignment;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import pl.yameo.internship.assignment.Triangle;
+import pl.yameo.internship.assignment.shapes.Triangle;
 
 public class TriangleTest {
 	private static final Double initialEdgeA = 3.0;

@@ -1,6 +1,4 @@
-package pl.yameo.internship.assignment;
-
-import sun.security.provider.SHA;
+package pl.yameo.internship.assignment.shapes;
 
 import java.util.Arrays;
 import java.util.List;

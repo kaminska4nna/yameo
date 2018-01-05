@@ -1,4 +1,4 @@
-package pl.yameo.internship.assignment;
+package pl.yameo.internship.assignment.shapes;
 
 public class Circle extends Ellipse {
 	public Circle(double radius) {

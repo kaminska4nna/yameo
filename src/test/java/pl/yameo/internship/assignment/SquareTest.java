@@ -3,8 +3,8 @@ package pl.yameo.internship.assignment;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-import pl.yameo.internship.assignment.Rectangle;
-import pl.yameo.internship.assignment.Square;
+import pl.yameo.internship.assignment.shapes.Rectangle;
+import pl.yameo.internship.assignment.shapes.Square;
 
 public class SquareTest {
 	private static final double DELTA = 0.001;
