@@ -1,9 +1,21 @@
 package pl.yameo.internship.assignment;
 
-public class Square extends Rectangle {
+import sun.security.provider.SHA;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Square implements Shape{
+	private double dimension;
+
 	public Square(double dimension) {
-		super(dimension, dimension);
+		this.dimension=dimension;
 	}
+
+	public void setDimension(double dimension) {
+		setDimension(dimension);
+	}
+
 
 	@Override
 	public String getName() {
@@ -11,17 +23,17 @@ public class Square extends Rectangle {
 	}
 
 	@Override
-	public void setHeight(double height) {
-		setDimension(height);
+	public List<Double> listDimensions() {
+		return Arrays.asList(dimension);
 	}
 
 	@Override
-	public void setWidth(double width) {
-		setDimension(width);
+	public double calculateArea() {
+		return dimension*dimension;
 	}
 
-	public void setDimension(double dimension) {
-		super.setHeight(dimension);
-		super.setWidth(dimension);
+	@Override
+	public double calculatePerimeter() {
+		return 4*dimension;
 	}
 }
