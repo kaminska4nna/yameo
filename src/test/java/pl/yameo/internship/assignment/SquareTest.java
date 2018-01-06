@@ -22,7 +22,7 @@ public class SquareTest {
 	@Test
 	public void when_height_set_then_dimension_is_changed() {
 		Square square = new Square(INITIAL_DIMENSION);
-		square.setHeight(NEW_EDGE_LENGTH);
+		square.setDimension(NEW_EDGE_LENGTH);
 		Assert.assertEquals(square.listDimensions().get(0), NEW_EDGE_LENGTH, DELTA);
 		Assert.assertEquals(square.listDimensions().get(1), NEW_EDGE_LENGTH, DELTA);
 	}
@@ -30,7 +30,7 @@ public class SquareTest {
 	@Test
 	public void when_width_set_then_dimension_is_changed() {
 		Square square = new Square(INITIAL_DIMENSION);
-		square.setWidth(NEW_EDGE_LENGTH);
+		square.setDimension(NEW_EDGE_LENGTH);
 		Assert.assertEquals(square.listDimensions().get(0), NEW_EDGE_LENGTH, DELTA);
 		Assert.assertEquals(square.listDimensions().get(1), NEW_EDGE_LENGTH, DELTA);
 	}
@@ -43,12 +43,12 @@ public class SquareTest {
 		Assert.assertEquals(square.listDimensions().get(1), NEW_EDGE_LENGTH, DELTA);
 	}
 
-	@Ignore("This fails with the most obvious rectangle rule. Something is wrong.")
+	/*@Ignore("This fails with the most obvious rectangle rule. Something is wrong.")
 	@Test
 	public void when_rectangle_width_is_halved_then_its_area_is_halved() {
 		Rectangle square = new Square(INITIAL_DIMENSION);
 		Assert.assertEquals(square.calculateArea(), INITIAL_AREA, DELTA);
 		square.setWidth(INITIAL_DIMENSION / 2);
 		Assert.assertEquals(square.calculateArea(), INITIAL_AREA / 2, DELTA);
-	}
+	}*/
 }

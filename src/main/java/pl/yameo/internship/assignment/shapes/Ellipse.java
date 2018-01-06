@@ -1,7 +1,5 @@
 package pl.yameo.internship.assignment.shapes;
 
-import pl.yameo.internship.assignment.shapes.Shape;
-
 import java.util.Arrays;
 import java.util.List;
 

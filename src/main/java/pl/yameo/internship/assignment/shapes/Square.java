@@ -11,8 +11,8 @@ public class Square implements Shape{
 	}
 
 	public void setDimension(double dimension) {
-		setDimension(dimension);
-	}
+			this.dimension=dimension;
+		}
 
 
 	@Override
@@ -21,17 +21,17 @@ public class Square implements Shape{
 	}
 
 	@Override
-	public List<Double> listDimensions() {
+	public final List<Double> listDimensions() {
 		return Arrays.asList(dimension);
 	}
 
 	@Override
-	public double calculateArea() {
+	public final double calculateArea() {
 		return dimension*dimension;
 	}
 
 	@Override
-	public double calculatePerimeter() {
+	public final double calculatePerimeter() {
 		return 4*dimension;
 	}
 }

@@ -1,8 +1,13 @@
 package pl.yameo.internship.assignment.shapes;
 
-public class Circle extends Ellipse {
+import java.util.Arrays;
+import java.util.List;
+
+public class Circle implements Shape {
+	private double radius;
+
 	public Circle(double radius) {
-		super(radius, radius);
+		this.radius= radius;
 	}
 
 	@Override
@@ -11,14 +16,23 @@ public class Circle extends Ellipse {
 	}
 
 	@Override
-	public void setSemiMajorAxis(double semiMajorAxis) {
-		setRadius(semiMajorAxis);
+	public final List<Double> listDimensions() {
+		return Arrays.asList(radius);
+	}
+
+	@Override
+	public final double calculateArea() {
+		return Math.PI*radius*radius;
+	}
+
+	@Override
+	public final double calculatePerimeter() {
+		return Math.PI*radius*2;
 	}
 
 
 
 	public void setRadius(double radius) {
-		super.setSemiMajorAxis(radius);
-		super.setSemiMinorAxis(radius);
+		this.radius=radius;
 	}
 }
