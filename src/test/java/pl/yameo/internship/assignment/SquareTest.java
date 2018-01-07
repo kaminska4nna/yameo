@@ -24,7 +24,7 @@ public class SquareTest {
 		Square square = new Square(INITIAL_DIMENSION);
 		square.setDimension(NEW_EDGE_LENGTH);
 		Assert.assertEquals(NEW_EDGE_LENGTH,square.listDimensions().get(0),  DELTA);
-		Assert.assertEquals(NEW_EDGE_LENGTH,square.listDimensions().get(1),  DELTA);
+		Assert.assertEquals(NEW_EDGE_LENGTH, square.listDimensions().get(1), DELTA);
 	}
 
 	@Test
@@ -32,7 +32,7 @@ public class SquareTest {
 		Square square = new Square(INITIAL_DIMENSION);
 		square.setDimension(NEW_EDGE_LENGTH);
 		Assert.assertEquals(NEW_EDGE_LENGTH,square.listDimensions().get(0),  DELTA);
-		Assert.assertEquals(NEW_EDGE_LENGTH,square.listDimensions().get(1),  DELTA);
+		Assert.assertEquals(NEW_EDGE_LENGTH, square.listDimensions().get(1), DELTA);
 	}
 
 	@Test
@@ -40,14 +40,8 @@ public class SquareTest {
 		Square square = new Square(INITIAL_DIMENSION);
 		square.setDimension(NEW_EDGE_LENGTH);
 		Assert.assertEquals(NEW_EDGE_LENGTH, square.listDimensions().get(0),  DELTA);
-		Assert.assertEquals(NEW_EDGE_LENGTH, square.listDimensions().get(1),  DELTA);
+		Assert.assertEquals(NEW_EDGE_LENGTH, square.listDimensions().get(1), DELTA);
+
 	}
 
-	@Test
-	public void when_rectangle_width_is_halved_then_its_area_is_halved() {
-		Rectangle square = new Square(INITIAL_DIMENSION);
-		Assert.assertEquals(square.calculateArea(), INITIAL_AREA, DELTA);
-		square.setWidth(INITIAL_DIMENSION / 2);
-		Assert.assertEquals((INITIAL_AREA / 2),square.calculateArea() , DELTA);
-	}
 }

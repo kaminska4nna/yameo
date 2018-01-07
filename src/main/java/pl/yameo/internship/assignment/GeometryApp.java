@@ -103,13 +103,13 @@ public class GeometryApp {
 		System.out.print("Area: " + oldArea + "; ");
 		System.out.println("Perimeter: " + oldPerimeter);
 
-		if (activeShape instanceof Ellipse) {
+		if (activeShape instanceof Circle) {
+			System.out.println("Please provide the radius for the circle:");
+			((Circle) activeShape).setRadius(readDouble());
+		} else if (activeShape instanceof Ellipse) {
 			System.out.println("Please provide two semi-axis lengths (major, minor):");
 			((Ellipse) activeShape).setSemiMajorAxis(readDouble());
 			((Ellipse) activeShape).setSemiMinorAxis(readDouble());
-		} else if (activeShape instanceof Circle) {
-			System.out.println("Please provide the radius for the circle:");
-			((Circle) activeShape).setRadius(readDouble());
 		} else if (activeShape instanceof Square) {
 			System.out.println("Please provide the edge length:");
 			((Square) activeShape).setDimension(readDouble());

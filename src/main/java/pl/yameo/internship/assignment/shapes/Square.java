@@ -1,10 +1,13 @@
 package pl.yameo.internship.assignment.shapes;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
-public class Square extends Rectangle {
+public class Square implements Shape {
+	private double dimension;
+
 	public Square(double dimension) {
-		super(dimension, dimension);
+		this.dimension=dimension;
 	}
 
 	@Override
@@ -13,17 +16,21 @@ public class Square extends Rectangle {
 	}
 
 	@Override
-	public void setHeight(double height) {
-		setDimension(height);
+	public List<Double> listDimensions() {
+		return Arrays.asList(dimension, dimension);
 	}
 
 	@Override
-	public void setWidth(double width) {
-		setDimension(width);
+	public double calculateArea() {
+		return dimension*dimension;
+	}
+
+	@Override
+	public double calculatePerimeter() {
+		return dimension*4;
 	}
 
 	public void setDimension(double dimension) {
-		super.setHeight(dimension);
-		super.setWidth(dimension);
+		this.dimension = dimension;
 	}
 }
