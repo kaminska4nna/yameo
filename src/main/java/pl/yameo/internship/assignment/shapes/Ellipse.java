@@ -4,10 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Ellipse implements Shape {
-	private double semiMajorAxis;
-	private double semiMinorAxis;
+	private double semiMajorAxis = 0.0;
+	private double semiMinorAxis = 0.0;
 
-	public Ellipse(double semiMajorAxis, Double semiMinorAxis) {
+	public Ellipse(Double semiMajorAxis, Double semiMinorAxis) {
 		this.semiMajorAxis = semiMajorAxis;
 		this.semiMinorAxis = semiMinorAxis;
 	}

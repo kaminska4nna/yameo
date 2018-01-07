@@ -19,11 +19,9 @@ public class TriangleTest {
 		Assert.assertEquals(initialEdgeC, triangle.listDimensions().get(2), 0.0001);
 	}
 
-	@Ignore("Not checked.")
 	@Test(expected = IllegalArgumentException.class)
 	public void when_impossible_triangle_is_created_then_exception_is_thrown() {
 		new Triangle(initialEdgeA, 1.0, initialEdgeC);
 	}
 
-	//TODO: 50% fails anyway, why bother.
 }

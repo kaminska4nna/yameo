@@ -3,11 +3,10 @@ package pl.yameo.internship.assignment.shapes;
 import java.util.Arrays;
 import java.util.List;
 
-public class Circle implements Shape {
-	private double radius;
 
-	public Circle(double radius) {
-		this.radius= radius;
+public class Circle extends Ellipse {
+	public Circle(Double radius) {
+		super(radius, radius);
 	}
 
 	@Override
@@ -16,23 +15,17 @@ public class Circle implements Shape {
 	}
 
 	@Override
-	public final List<Double> listDimensions() {
-		return Arrays.asList(radius);
+	public void setSemiMajorAxis(double semiMajorAxis) {
+		setRadius(semiMajorAxis);
 	}
 
 	@Override
-	public final double calculateArea() {
-		return Math.PI*radius*radius;
+	public void setSemiMinorAxis(double semiMinorAxis) {
+		setRadius(semiMinorAxis);
 	}
 
-	@Override
-	public final double calculatePerimeter() {
-		return Math.PI*radius*2;
-	}
-
-
-
-	public void setRadius(double radius) {
-		this.radius=radius;
+	public void setRadius(Double radius) {
+		super.setSemiMajorAxis(radius);
+		super.setSemiMinorAxis(radius);
 	}
 }

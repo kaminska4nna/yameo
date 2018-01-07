@@ -47,4 +47,6 @@ public class Triangle implements Shape {
 	public void setEdgeC(double edgeC) {
 		this.edgeC = edgeC;
 	}
+
+
 }

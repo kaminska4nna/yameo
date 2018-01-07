@@ -18,7 +18,7 @@ public class GeometryApp {
 	public void start() {
 		boolean run = true;
 		while (run) {
-			run = run();
+			run();
 		}
 	}
 
@@ -46,8 +46,6 @@ public class GeometryApp {
 			case 3:
 				modifyShape();
 				break;
-
-
 		}
 		return true;
 	}
@@ -93,10 +91,7 @@ public class GeometryApp {
 	private void modifyShape() {
 		listShapes();
 		System.out.println("Please choose the index of the shape you want to modify (1-" + shapes.size() + "): ");
-		changeShape();
-	}
 
-	private void changeShape() {
 		int index = readInteger();
 		Shape activeShape = shapes.get(index - 1);
 		List<Double> oldDimensions = activeShape.listDimensions();
@@ -108,39 +103,39 @@ public class GeometryApp {
 		System.out.print("Area: " + oldArea + "; ");
 		System.out.println("Perimeter: " + oldPerimeter);
 
-			if (activeShape instanceof Ellipse) {
-				System.out.println("Please provide two semi-axis lengths (major, minor):");
-				((Ellipse) activeShape).setSemiMajorAxis(readDouble());
-				((Ellipse) activeShape).setSemiMinorAxis(readDouble());
-			} else if (activeShape instanceof Circle) {
-				System.out.println("Please provide the radius for the circle:");
-				((Circle) activeShape).setRadius(readDouble());
-			} else if (activeShape instanceof Square) {
-				System.out.println("Please provide the edge length:");
-				((Square) activeShape).setDimension(readDouble());
-			} else if (activeShape instanceof Rectangle) {
-				System.out.println("Please provide two edge lengths (height, width):");
-				((Rectangle) activeShape).setHeight(readDouble());
-				((Rectangle) activeShape).setWidth(readDouble());
-			} else if (activeShape instanceof Triangle) {
-				System.out.println("Please provide three edge lengths:");
-				((Triangle) activeShape).setEdgeA(readDouble());
-				((Triangle) activeShape).setEdgeB(readDouble());
-				((Triangle) activeShape).setEdgeC(readDouble());
-			}
+		if (activeShape instanceof Ellipse) {
+			System.out.println("Please provide two semi-axis lengths (major, minor):");
+			((Ellipse) activeShape).setSemiMajorAxis(readDouble());
+			((Ellipse) activeShape).setSemiMinorAxis(readDouble());
+		} else if (activeShape instanceof Circle) {
+			System.out.println("Please provide the radius for the circle:");
+			((Circle) activeShape).setRadius(readDouble());
+		} else if (activeShape instanceof Square) {
+			System.out.println("Please provide the edge length:");
+			((Square) activeShape).setDimension(readDouble());
+		} else if (activeShape instanceof Rectangle) {
+			System.out.println("Please provide two edge lengths (height, width):");
+			((Rectangle) activeShape).setHeight(readDouble());
+			((Rectangle) activeShape).setWidth(readDouble());
+		} else if (activeShape instanceof Triangle) {
+			System.out.println("Please provide three edge lengths:");
+			((Triangle) activeShape).setEdgeA(readDouble());
+			((Triangle) activeShape).setEdgeB(readDouble());
+			((Triangle) activeShape).setEdgeC(readDouble());
+		}
 
-			System.out.println("Old shape: ");
-			System.out.print(activeShape.getName() + " with dimensions: ");
-			System.out.print(oldDimensions + "; ");
-			System.out.print("Area: " + oldArea + "; ");
-			System.out.println("Perimeter: " + oldPerimeter);
-			System.out.println("============================");
-			System.out.println("New shape: ");
-			System.out.print(activeShape.getName() + " with dimensions: ");
-			System.out.print(activeShape.listDimensions() + "; ");
-			System.out.print("Area: " + activeShape.calculateArea() + "; ");
-			System.out.println("Perimeter: " + activeShape.calculatePerimeter());
-			System.out.println("============================");
+		System.out.println("Old shape: ");
+		System.out.print(activeShape.getName() + " with dimensions: ");
+		System.out.print(oldDimensions + "; ");
+		System.out.print("Area: " + oldArea + "; ");
+		System.out.println("Perimeter: " + oldPerimeter);
+		System.out.println("============================");
+		System.out.println("New shape: ");
+		System.out.print(activeShape.getName() + " with dimensions: ");
+		System.out.print(activeShape.listDimensions() + "; ");
+		System.out.print("Area: " + activeShape.calculateArea() + "; ");
+		System.out.println("Perimeter: " + activeShape.calculatePerimeter());
+		System.out.println("============================");
 
 	}
 
